@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Wetland Identification Automation
 
 You can use the [editor on GitHub](https://github.com/jgerlitz/WetlandIdentification/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
