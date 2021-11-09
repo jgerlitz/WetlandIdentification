@@ -6,6 +6,7 @@ This tool is created to make identification of wetlands in Iowa easier and more 
 3. Terrain Ruggedness Index (TRI)
 4. Slope
 5. Fill
+
 Currently, I am using four different locations for both training and testing the data
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
