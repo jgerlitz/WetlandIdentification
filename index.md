@@ -1,6 +1,6 @@
 ## Wetland Identification Automation
 
-You can use the [editor on GitHub](https://github.com/jgerlitz/WetlandIdentification/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This tool is created to make identification of wetlands in Iowa easier and more efficient. It will identify whether or not a location specific data point is a wetland or not a wetland based on five different digital elevation model (DEM) indices.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
