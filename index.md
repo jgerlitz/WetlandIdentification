@@ -1,6 +1,12 @@
 ## Wetland Identification Automation
 
-This tool is created to make identification of wetlands in Iowa easier and more efficient. It will identify whether or not a location specific data point is a wetland or not a wetland based on five different digital elevation model (DEM) indices.
+This tool is created to make identification of wetlands in Iowa easier and more efficient. It will identify whether or not a location specific data point is a wetland or not a wetland based on five different digital elevation model (DEM) indices. Those five indices are as follows:
+1. Topographic Position Index (TPI)
+2. Topographic Wetness Index (TWI)
+3. Terrain Ruggedness Index (TRI)
+4. Slope
+5. Fill
+
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
