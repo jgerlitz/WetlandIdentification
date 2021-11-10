@@ -7,7 +7,7 @@ This tool is created to make identification of wetlands in Iowa easier and more 
 4. Slope
 5. Fill
 
-Currently, I am using four different locations for both training and testing the data
+Currently, I am using four different locations for both training and testing the data. The four counties are Ida, Harrison, Linn, and Louisa counties and can be seen on the map below.
 
 ![County map of Iowa](/wetland-identification/iowa-map.png)
 
