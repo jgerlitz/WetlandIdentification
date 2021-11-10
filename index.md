@@ -9,6 +9,8 @@ This tool is created to make identification of wetlands in Iowa easier and more 
 
 Currently, I am using four different locations for both training and testing the data
 
+![County map of Iowa](/least-github-pages/assets/iowa-map.png)
+
 ### Acknowledgements
 
 I would like to thank Dr. Amy Kaleita, Dr. Brian Gelder, and Dr. Bradley Miller at Iowa State University for being on my thesis committee and helping me throughout my time as a MS student, and Dr. Adina Howe for furthering my knowledge in data analytics with her ABE 516 course. I would also like to thank Brad Hofer and Mike Carlson at the Iowa DOT for providing resources and funding for this project. 
