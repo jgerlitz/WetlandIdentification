@@ -9,7 +9,7 @@ This tool is created to make identification of wetlands in Iowa easier and more 
 
 Currently, I am using four different locations for both training and testing the data
 
-![County map of Iowa](/least-github-pages/assets/iowa-map.png)
+![County map of Iowa](/wetland-identification/iowa-map.png)
 
 ### Acknowledgements
 
