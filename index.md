@@ -18,6 +18,7 @@ The final objective of this project is to create an ArcGIS toolbox that can take
 ### Project Workflow
 
 ![Project Workflow](/wetland-identification/516x Project Workflow.png)
+
 ![Project Workflow](/wetland-identification/516x Project Workflow pt 2.png)
 
 ### Acknowledgements
