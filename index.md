@@ -15,15 +15,15 @@ Currently, I am using four different locations for both training and testing the
 
 Wetlands are crucial nutrient removal sites and ecosystems. They help reduce the amount of nitrates that end up in the Gulf of Mexico , which is important for decreasing the size of the hypoxic, otherwise known as deadzone, found in the Gulf of Mexico. Protection of our Nation's wetlands fall under the Clean Water Act (CWA), the Protection of Wetlands executive order, and are defined in the Waters of the United States (WOTUS). Because wetlands are a protected resource, the Iowa DOT is tasked with identifying and mitigating the damage to them during construction projects, which can be a tedious task.
 
-The current Iowa DOT process as described in their "Office of Location and Environment Manual" can be seen below
+The current Iowa DOT process as described in their "Office of Location and Environment Manual" can be seen below. The part of the process I'm aiming to automate is 
 
-![DOT Wetland Delineation and Mitigation Process](/wetland-identification/dot-wetland-process.png)
+![DOT Wetland Delineation and Mitigation Process](/wetland-identification/dot-wetland-process.PNG)
 
-### Project Objective
+## Project Objective
 
 The final objective of this project is to create an ArcGIS toolbox that can take in county wide DEM data and show where wetlands would be located. 
 
-### Project Workflow
+## Project Workflow
 
 ![Project Workflow 1](/wetland-identification/project-workflow-1.png)
 
@@ -31,6 +31,7 @@ The final objective of this project is to create an ArcGIS toolbox that can take
 
 ![Project Workflow 3](/wetland-identification/project-workflow-3.png)
 
+## Project Code
 ### Unfinished Project Toolbox Code (11/23/2021)
 
 ```python
