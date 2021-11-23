@@ -159,7 +159,7 @@ class ExtractPointsModel(object):
         return rand_points
 ```
 
-### Unfinished Project Machine Learning Code (11/23/2021)
+### Unfinished Machine Learning Project Code (11/23/2021)
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
