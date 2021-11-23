@@ -53,54 +53,54 @@ class ExtractPointsModel(object):
     def getParameterInfo(self):
         """Define parameter definitions"""
         param0 = arcpy.Parameter(
-			    displayName = "Output Workspace",
-			    name = "output_workspace",
-			    datatype = "DEWorkspace", 
-			    parameterType = "Required",
-			    direction = "Input")
+		displayName = "Output Workspace",
+		name = "output_workspace",
+		datatype = "DEWorkspace", 
+		parameterType = "Required",
+		direction = "Input")
          
         param1 = arcpy.Parameter(
-            displayName = "Input DEM file",
-            name =  "Input",
-            datatype = "GPRasterLayer", 
-            parameterType = "Required",
-            direction = "Input")
+		displayName = "Input DEM file",
+		name =  "Input",
+		datatype = "GPRasterLayer", 
+		parameterType = "Required",
+		direction = "Input")
         
         param2 = arcpy.Parameter(
-			    displayName = "Area of Interest Shapefile",
-			    name = "aoi_shape",
-			    datatype = ["DEShapefile","DEFeatureClass"],
-			    parameterType = "Required",
-			    direction = "Input")
+		displayName = "Area of Interest Shapefile",
+		name = "aoi_shape",
+		datatype = ["DEShapefile","DEFeatureClass"],
+		parameterType = "Required",
+		direction = "Input")
         
         param3 = arcpy.Parameter(
-			    displayName = "Number of Random Points",
-			    name = "num_points",
-			    datatype = "GPString",
-			    parameterType = "Required",
-			    direction = "Input")
+		displayName = "Number of Random Points",
+		name = "num_points",
+		datatype = "GPString",
+		parameterType = "Required",
+		direction = "Input")
 
        
         params = [param0, param1, param2, param3]
         return params
 
     def isLicensed(self):
-        """Set whether tool is licensed to execute."""
+        # """Set whether tool is licensed to execute."""
         return True
 
     def updateParameters(self, parameters):
-        """Modify the values and properties of parameters before internal
+        # """Modify the values and properties of parameters before internal
         validation is performed.  This method is called whenever a parameter
         has been changed."""
         return
 
     def updateMessages(self, parameters):
-        """Modify the messages created by internal validation for each tool
+        # """Modify the messages created by internal validation for each tool
         parameter.  This method is called after internal validation."""
         return
 
     def execute(self, parameters, messages):
-        """The source code of the tool."""
+        # """The source code of the tool."""
          # To allow overwriting outputs change overwriteOutput option to True.
         output_workspace = arcpy.GetParameterAsText(0)
         Input = arcpy.GetParameterAsText(1)
@@ -167,6 +167,7 @@ class ExtractPointsModel(object):
     
         # Process: Extract Multi Values to Points (Extract Multi Values to Points) (sa)
         rand_points = arcpy.sa.ExtractMultiValuesToPoints(in_point_features=rand_points, in_rasters=[[TPI, "tpi"], [TRI, "tri"], [TWI, "twi"], [slope, "slope"], [fill, "fill"]], bilinear_interpolate_values="NONE").save(Extract_Multi_Values_to_Points)
+	
         return rand_points
 ```
 
