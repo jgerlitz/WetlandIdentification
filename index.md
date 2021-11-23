@@ -25,7 +25,7 @@ The final objective of this project is to create an ArcGIS toolbox that can take
 
 ### Unfinished Project Code (11/23/2021)
 
-```markdown
+```python
 import arcpy
 from arcpy.ia import *
 from arcpy.sa import *
