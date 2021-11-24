@@ -224,30 +224,37 @@ for ty in kerntype:
 maxacc = max(totalacc)
 max_index = totalacc.index(maxacc)
 print("Best Kernel: ", tydata[max_index], "\nAccuracy: ", maxacc)
+print("\n\n")
 
 rf = RandomForestClassifier(n_estimators=200, random_state=50, max_depth=9, min_samples_split=7)
 rf.fit(X_train, y_train)
 y_pred = rf.predict(X_test)
 Prob = rf.predict_proba(X_test)
 acc = accuracy_score(y_test, y_pred)
-print("Random Forest accuracy: ", acc)
+cmx = metrics.confusion_matrix(y_test, y_pred)
+cmdf = pd.DataFrame(cmx, index = ['Nonwetland','Wetland'], columns = ['Nonwetland', 'Wetland'])
+print("\nRandom Forest accuracy: ", acc)
+print(cmdf, "\n")
+print(classification_report(y_pred_class, y_test))
 
 
 dif = maxacc - acc
 if dif > 0:
-    print("Use support vector machines, kernel", tydata[max_index])
+    print("\nUse support vector machines, kernel", tydata[max_index])
 elif dif < 0:
-    print("Use Random Forest")
+    print("\nUse Random Forest")
 else:
-    print("Choose either")
+    print("\nChoose either")
     print("If you choose SVM, then use kernel", tydata[max_index])
 ```
 
 ### Output from Above Code
 
-![Output 1](/wetland-identification/comparison-output-1.PNG)
+![Output 1 - Support Vector Machine confusion matrix](/wetland-identification/comparison-output-1.PNG)
 
-![Output 2](/wetland-identification/comparison-output-2.PNG)
+![Output 2 - Support Vector Machine confusion matrix continued](/wetland-identification/comparison-output-2.PNG)
+
+![Output 3 - Random Forest Confusion Matrix, accuracy, and final determination to use RF](/wetland-identification/comparison-output-3.PNG)
 
 ### Unfinished Machine Learning Project Code (11/23/2021)
 
