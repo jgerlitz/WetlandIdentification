@@ -247,6 +247,13 @@ else:
     print("\nChoose either")
     print("If you choose SVM, then use kernel", tydata[max_index])
 ```
+### Input for Above Code
+
+The cluster of blue points are where the identified wetlands are location, and the light green points are identified as nonwetland points.
+
+![linn testing points input](/wetland-identification/linn-testing-points.PNG)
+
+![example attribute table for linn testing points](/wetland-identification/example-attribute-table-linn.PNG)
 
 ### Output from Above Code
 
