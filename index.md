@@ -277,7 +277,7 @@ import matplotlib.pyplot as plt
 import os 
 
 # Training random forest using training dataset of user's choosing
-inputFC = r'MoValley_combined'
+inputFC = r'linn_testing_points'
 predictVars = ['tpi', 'tri', 'twi','slope', 'fill']
 classVar = ['Wetland']
 allVars = predictVars + classVar
@@ -303,7 +303,7 @@ print(confusion_matrix(y_test,y_pred))
 print(classification_report(y_test,y_pred))
 
 # Testing on new location with unknown wetland locations
-globalFC = r'linn_testing_points'
+globalFC = r'highway20_combined'
 
 predictVars = ['tpi', 'tri', 'twi', 'slope', 'fill']
 globalData = da.FeatureClassToNumPyArray(globalFC, ["SHAPE@XY"] + predictVars)
