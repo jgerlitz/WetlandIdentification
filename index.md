@@ -298,9 +298,6 @@ rf.fit(X_train, y_train)
 y_pred = rf.predict(X_test)
 Prob = rf.predict_proba(X_test)
 acc = accuracy_score(y_test, y_pred)
-print(acc)
-print(confusion_matrix(y_test,y_pred))
-print(classification_report(y_test,y_pred))
 
 # Testing on new location with unknown wetland locations
 globalFC = r'highway20_combine'
@@ -323,9 +320,17 @@ arcpy.da.NumPyArrayToFeatureClass(wetlandDoesNotExists, os.path.join(outputDir, 
 
 ### Output for Above Code
 
-![Output 1 - Random Forest confusion matrix and accuracy](/wetland-identification/rf-output-1.PNG)
+The red dots are where the random forest has identified wetlands to be and the green dots are where it has identified where wetlands do not exist. 
 
 ![Output 2 - Identified wetland and nonwetland points using random forest for highway 20 location](/wetland-identification/rf-output-2.PNG)
+
+### Analysis of Final Outputs
+
+The red dots are where the Iowa DOT has identified wetlands to be and the green dots are where they have identified where wetlands do not exist. 
+
+![Output 2 - Identified wetland and nonwetland points using the Iowa DOT map for highway 20 location](/wetland-identification/hw20-wetland-identification.PNG)
+
+There is one important thing to note here. Since this project is being done for the Iowa DOT, who mainly care about wetlands located around potential or existing roads, the identified wetlands shown may not be a comprehensive list of all of the wetlands in the area. Meaning, declaring with 100% certainty that each existing green dot is for sure not a wetland would be inaccurate. To remedy this situation, I could have sampled the space directly adjacent to the road, but that may skew the random forests decision making capabilities due to multiple data points needing to then come from an artificial change in topography that is a road. 
 
 ### Acknowledgements
 
