@@ -321,6 +321,12 @@ arcpy.da.NumPyArrayToFeatureClass(wetlandExists, os.path.join(outputDir, nameFCw
 arcpy.da.NumPyArrayToFeatureClass(wetlandDoesNotExists, os.path.join(outputDir, nameFCnonwetland), ['SHAPE@XY'], spatRefGlobal)
 ```
 
+### Output for Above Code
+
+![Output 1 - Random Forest confusion matrix and accuracy](/wetland-identification/rf-output-1.PNG)
+
+![Output 2 - Identified wetland and nonwetland points using random forest for highway 20 location](/wetland-identification/rf-output-2.PNG)
+
 ### Acknowledgements
 
 I would like to thank Dr. Amy Kaleita, Dr. Brian Gelder, and Dr. Bradley Miller at Iowa State University for being on my thesis committee and helping me throughout my time as a MS student, and Dr. Adina Howe for furthering my knowledge in data analytics with her ABE 516 course. I would also like to thank Brad Hofer and Mike Carlson at the Iowa DOT for providing resources and funding for this project. 
