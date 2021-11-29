@@ -303,7 +303,7 @@ print(confusion_matrix(y_test,y_pred))
 print(classification_report(y_test,y_pred))
 
 # Testing on new location with unknown wetland locations
-globalFC = r'highway20_combined'
+globalFC = r'highway20_combine'
 
 predictVars = ['tpi', 'tri', 'twi', 'slope', 'fill']
 globalData = da.FeatureClassToNumPyArray(globalFC, ["SHAPE@XY"] + predictVars)
