@@ -324,6 +324,8 @@ The red dots are where the random forest has identified wetlands to be and the g
 
 ![Output 2 - Identified wetland and nonwetland points using random forest for highway 20 location](/wetland-identification/rf-output-2.PNG)
 
+**Accuracy for new site: 73.3%**
+
 ### Analysis of Final Outputs
 
 The red dots are where the Iowa DOT has identified wetlands to be and the green dots are where they have identified where wetlands do not exist. 
