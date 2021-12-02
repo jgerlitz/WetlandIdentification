@@ -6,7 +6,7 @@ Motivation: Wetlands are vital for cleaning water that may contain various pollu
 
 Objective: Create an ArcGIS toolbox for delineating wetlands
 
-Study Area: There are four different locations around the state of Iowa
+Study Area: There are four different locations around the state of Iowa. This project specifically uses locations in Linn and Ida county.
 
 ## Methodology
 
@@ -345,7 +345,7 @@ The red dots are where the Iowa DOT has identified wetlands to be and the green 
 
 There is one important thing to note here. Since this project is being done for the Iowa DOT, who mainly care about wetlands located around potential or existing roads, the identified wetlands shown may not be a comprehensive list of all of the wetlands in the area. Meaning, declaring with 100% certainty that each existing green dot is for sure not a wetland would be inaccurate. To remedy this situation, I could have sampled the space directly adjacent to the road, but that may skew the random forests decision making capabilities due to multiple data points needing to then come from an artificial change in topography that is a road. 
 
-The decrease in accuracy comes mostly from over identifying points as wetlands. There are 6 instances where no data points within the wetlands are identified as wetland, as shown below.
+The decrease in accuracy comes mostly from over identifying points as wetlands. There are 7 instances where no data points within the wetlands are identified as wetland, as shown below. While these wetlands look small, they have been identified by the DOT as areas of interest, so missing them is not a good sign. In order to remedy this in the future, I plan to make the training dataset more robust. 
 
 ![Missed wetland 1](/wetland-identification/pictures/missed-wetland-1.PNG)
 
@@ -366,7 +366,6 @@ Final Delineation Accuracy: 73.3% of data points were identified properly
 ## Contact Information
 
 Feel free to contact me with any questions regarding this project.
-
 email: jgerlitz@iastate.edu
 
 ## Acknowledgements
