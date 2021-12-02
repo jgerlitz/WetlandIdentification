@@ -1,5 +1,15 @@
 ## Wetland Identification Automation
 
+## At a Glance
+
+Motivation: Wetlands are vital for cleaning water that may contain various pollutants such as nitrates. Nitrates have a detrimental effect on the water in the Gulf of Mexico. Delineating wetlands is a tedious but necessary task for the DOT to perform, and with my toolbox I aim to speed up the process.
+
+Objective: Create an ArcGIS toolbox for delineating wetlands
+
+Study Area: There are four different locations around the state of Iowa
+
+## Methodology
+
 This tool is created to make identification of wetlands in Iowa easier and more efficient. It will identify whether or not a location specific data point is a wetland or not a wetland based on five different digital elevation model (DEM) indices. Those five indices are as follows:
 1. Topographic Position Index (TPI)
 2. Topographic Wetness Index (TWI)
@@ -32,7 +42,7 @@ The final objective of this project is to create an ArcGIS toolbox that can take
 ![Project Workflow 3](/wetland-identification/project-workflow-3.png)
 
 ## Project Code
-### Unfinished Project Toolbox Code (11/23/2021)
+### Project Toolbox Code
 
 ```python
 import arcpy
@@ -169,6 +179,14 @@ class ExtractPointsModel(object):
 ```
 ### Support Vector Machines vs. Random Forest Determination Code
 
+### Input for Above Code
+
+The cluster of blue points are where the identified wetlands are location, and the light green points are identified as nonwetland points.
+
+![linn testing points input](/wetland-identification/linn-testing-points.PNG)
+
+![example attribute table for linn testing points](/wetland-identification/example-attribute-table-linn.PNG)
+
 ```python
 import pandas as pd
 import sklearn
@@ -247,13 +265,6 @@ else:
     print("\nChoose either")
     print("If you choose SVM, then use kernel", tydata[max_index])
 ```
-### Input for Above Code
-
-The cluster of blue points are where the identified wetlands are location, and the light green points are identified as nonwetland points.
-
-![linn testing points input](/wetland-identification/linn-testing-points.PNG)
-
-![example attribute table for linn testing points](/wetland-identification/example-attribute-table-linn.PNG)
 
 ### Output from Above Code
 
@@ -263,7 +274,7 @@ The cluster of blue points are where the identified wetlands are location, and t
 
 ![Output 3 - Random Forest Confusion Matrix, accuracy, and final determination to use RF](/wetland-identification/comparison-output-3.PNG)
 
-### Unfinished Machine Learning Project Code (11/23/2021)
+### Machine Learning Project Code
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -322,7 +333,7 @@ arcpy.da.NumPyArrayToFeatureClass(wetlandDoesNotExists, os.path.join(outputDir, 
 
 The red dots are where the random forest has identified wetlands to be and the green dots are where it has identified where wetlands do not exist. 
 
-![Output 2 - Identified wetland and nonwetland points using random forest for highway 20 location](/wetland-identification/rf-output-2.PNG)
+![Identified wetland and nonwetland points using random forest for highway 20 location](/wetland-identification/rf-output-2.PNG)
 
 **Accuracy for new site: 73.3%**
 
@@ -330,11 +341,35 @@ The red dots are where the random forest has identified wetlands to be and the g
 
 The red dots are where the Iowa DOT has identified wetlands to be and the green dots are where they have identified where wetlands do not exist. 
 
-![Output 2 - Identified wetland and nonwetland points using the Iowa DOT map for highway 20 location](/wetland-identification/hw20-wetland-identification.PNG)
+![Identified wetland and nonwetland points using the Iowa DOT map for highway 20 location](/wetland-identification/hw20-wetland-identification.PNG)
 
 There is one important thing to note here. Since this project is being done for the Iowa DOT, who mainly care about wetlands located around potential or existing roads, the identified wetlands shown may not be a comprehensive list of all of the wetlands in the area. Meaning, declaring with 100% certainty that each existing green dot is for sure not a wetland would be inaccurate. To remedy this situation, I could have sampled the space directly adjacent to the road, but that may skew the random forests decision making capabilities due to multiple data points needing to then come from an artificial change in topography that is a road. 
 
-### Acknowledgements
+The decrease in accuracy comes mostly from over identifying points as wetlands. There are 6 instances where no data points within the wetlands are identified as wetland, as shown below.
+
+![Missed wetland 1](/wetland-identification/pictures/missed-wetland-1.PNG)
+
+![Missed wetland 2](/wetland-identification/pictures/missed-wetland-2.PNG)
+
+![Missed wetland 3](/wetland-identification/pictures/missed-wetland-3.PNG)
+
+![Missed wetland 4](/wetland-identification/pictures/missed-wetland-4.PNG)
+
+![Missed wetland 5](/wetland-identification/pictures/missed-wetland-5.PNG)
+
+## Final Summary
+
+Machine Learning Method: Random Forest outperforms Support Vector Machines regardless of Kernel type, therefore, the final model uses Random Forest
+
+Final Delineation Accuracy: 73.3% of data points were identified properly
+
+## Contact Information
+
+Feel free to contact me with any questions regarding this project.
+
+email: jgerlitz@iastate.edu
+
+## Acknowledgements
 
 I would like to thank Dr. Amy Kaleita, Dr. Brian Gelder, and Dr. Bradley Miller at Iowa State University for being on my thesis committee and helping me throughout my time as a MS student, and Dr. Adina Howe for furthering my knowledge in data analytics with her ABE 516 course. I would also like to thank Brad Hofer and Mike Carlson at the Iowa DOT for providing resources and funding for this project. 
 
