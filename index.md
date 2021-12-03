@@ -1,5 +1,7 @@
 ## Wetland Identification Automation
 
+Creator: Jade Gerlitz, Grad student in ABE at Iowa State University
+
 ## At a Glance
 
 Motivation: Wetlands are vital for cleaning water that may contain various pollutants such as nitrates. Nitrates have a detrimental effect on the water in the Gulf of Mexico. Delineating wetlands is a tedious but necessary task for the DOT to perform, and with my toolbox I aim to speed up the process.
@@ -366,6 +368,7 @@ Final Delineation Accuracy: 73.3% of data points were identified properly
 ## Contact Information
 
 Feel free to contact me with any questions regarding this project.
+
 email: jgerlitz@iastate.edu
 
 ## Acknowledgements
