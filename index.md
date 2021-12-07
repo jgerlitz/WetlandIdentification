@@ -4,11 +4,11 @@ Creator: Jade Gerlitz, Grad student in ABE at Iowa State University
 
 ## At a Glance
 
-Motivation: Wetlands are vital for cleaning water that may contain various pollutants such as nitrates. Nitrates have a detrimental effect on the water in the Gulf of Mexico. Delineating wetlands is a tedious but necessary task for the DOT to perform, and with my toolbox I aim to speed up the process.
+**Motivation:** Wetlands are vital for cleaning water that may contain various pollutants such as nitrates. Nitrates have a detrimental effect on the water in the Gulf of Mexico. Delineating wetlands is a tedious but necessary task for the DOT to perform, and with my toolbox I aim to speed up the process.
 
-Objective: Create an ArcGIS toolbox for delineating wetlands
+**Objective:** Create an ArcGIS toolbox for delineating wetlands
 
-Study Area: There are four different locations around the state of Iowa. This project specifically uses locations in Linn and Ida county.
+**Study Area:** There are four different locations around the state of Iowa. This project specifically uses locations in Linn and Ida county.
 
 ## Methodology
 
@@ -363,15 +363,15 @@ The decrease in accuracy comes mostly from over identifying points as wetlands. 
 
 ## Final Summary
 
-Machine Learning Method: Random Forest outperforms Support Vector Machines regardless of Kernel type, therefore, the final model uses Random Forest
+**Machine Learning Method:** Random Forest outperforms Support Vector Machines regardless of Kernel type, therefore, the final model uses Random Forest
 
-Final Delineation Accuracy: 73.3% of data points were identified properly
+**Final Delineation Accuracy:** 73.3% of data points were identified properly
 
 ## Contact Information
 
 Feel free to contact me with any questions regarding this project.
 
-email: jgerlitz@iastate.edu
+**email:** jgerlitz@iastate.edu
 
 ## Acknowledgements
 
