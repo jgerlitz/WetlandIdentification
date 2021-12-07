@@ -46,6 +46,8 @@ The final objective of this project is to create an ArcGIS toolbox that can take
 ## Project Code
 ### Project Toolbox Code
 
+![Points extraction model](/wetland-identification/pictures/points-extraction-model.PNG)
+
 ```python
 import arcpy
 from arcpy.ia import *
